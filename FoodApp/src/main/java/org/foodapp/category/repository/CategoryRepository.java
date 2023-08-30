@@ -1,0 +1,10 @@
+package org.foodapp.category.repository;
+import java.util.List;
+
+import org.foodapp.category.model.Category;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+
+public interface CategoryRepository extends JpaRepository<Category , Integer>{
+	public List<Category> findByCategoryName(String catName);
+}
